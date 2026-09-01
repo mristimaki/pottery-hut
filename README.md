@@ -24,7 +24,7 @@ och att det är ett skolprojekt för JavaScript 3.
 ### Installation
 \`\`\`bash
 # Klona repot
-git clone https://github.com/DITT-ANVÄNDARNAMN/pottery-hut.git
+git clone https://github.com/mristimaki/pottery-hut.git
 
 # Starta backend
 cd server
