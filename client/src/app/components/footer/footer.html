@@ -1,0 +1,57 @@
+<footer class="site-footer">
+    <div class="benefits">
+        <div class="benefit">
+            <i class="fa-solid fa-earth-americas"></i>
+            <span>Gratis frakt och returer</span>
+        </div>
+        <div class="benefit">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Expressfrakt</span>
+        </div>
+        <div class="benefit">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Säkra betalningar</span>
+        </div>
+        <div class="benefit">
+            <i class="fa-regular fa-face-smile"></i>
+            <span>Nyheter varje dag</span>
+        </div>
+    </div>
+
+    <div class="footer-columns">
+        <div class="footer-column">
+            <button class="column-header" (click)="toggleSection('shopping')" [class.open]="isOpen('shopping')">
+                Shopping
+            </button>
+            <ul class="column-links" [class.open]="isOpen('shopping')">
+                <li><a href="#">Muggar</a></li>
+                <li><a href="#">Skålar</a></li>
+                <li><a href="#">Tallrikar</a></li>
+                <li><a href="#">Uppläggningsfat</a></li>
+                <li><a href="#">Vaser</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <button class="column-header" (click)="toggleSection('mina-sidor')">
+                Mina sidor
+            </button>
+            <ul class="column-links" [class.open]="isOpen('mina-sidor')">
+                <li><a href="#">Mina Ordrar</a></li>
+                <li><a href="#">Mitt Konto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <button class="column-header" (click)="toggleSection('kundtjanst')">
+                Kundtjänst
+            </button>
+            <ul class="column-links" [class.open]="isOpen('kundtjanst')">
+                <li><a href="#">Returpolicy</a></li>
+                <li><a href="#">Integritetspolicy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="copyright">© The Pottery Hut</p>
+</footer>

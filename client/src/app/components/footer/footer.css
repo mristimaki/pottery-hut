@@ -1,0 +1,105 @@
+.site-footer {
+    padding: 1.5rem 1rem;
+    border-top: 1px solid #ddd; /* Ändra färger sen */
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.benefit i {
+    font-size: 1.5rem;
+}
+
+.footer-columns {
+    border-top: 1px solid #ddd;
+    padding-top: 0.5rem;
+}
+
+.footer-column {
+    border-bottom: 1px solid #ddd;
+}
+
+.column-header {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0.5rem 0;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.column-header.open {
+    background-color: #e0f0ff; /* ändra färger sen */
+}
+
+.column-links {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0.5rem 0;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.column-links.open {
+    display: flex;
+}
+
+.column-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #667; /* ändra färger sen */
+}
+
+@media (min-width: 640px) {
+    .benefits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 2rem;
+    }
+
+    .footer-columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        border-top: none;
+    }
+
+    .footer-column {
+        border-bottom: none;
+    }
+
+    .column-header {
+        cursor: default;
+        pointer-events: none;
+        background: none !important;
+        padding-bottom: 0.5rem;
+    }
+
+    .column-links {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .benefits {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
