@@ -1,0 +1,27 @@
+<header class="site-header">
+    <a routerLink="/" class="logo">The Pottery Hut</a>
+
+    <div class="search-row">
+        <form class="search-form" (ngSubmit)="OnSearch()">
+            <input 
+                type="text" 
+                placeholder="Sök produkt"
+                [(ngModel)]="searchTerm"
+                name="" id=""
+            />
+            <button type="submit">Sök</button>
+        </form>
+
+        <div class="icons">
+            <a href="#" aria-label="Favoriter"><i class="fa-regular fa-heart"></i></a>
+            <a routerLink="/basket" aria-label="Varukorg"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <a href="#">Nyheter</a>
+        <a href="#">Topplistan</a>
+        <a href="#">Rea</a>
+        <a href="#">Kampanjer</a>
+    </nav>
+</header>
