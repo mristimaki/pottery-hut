@@ -1,0 +1,49 @@
+.product-card {
+    display: block;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.image-wrapper {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background-color: var(--color-dust-grey);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: relative;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 0.75rem;
+    padding: o.25rem var(--spacing-sm);
+    border-radius: var(--radius-sm);
+}
+
+.brand {
+    margin: var(--spacing-sm) 0 0.25rem 0;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.name {
+    margin: 0 0 0.25rem 0;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+}
+
+.price {
+    margin: 0;
+    font-weight: 600;
+}
