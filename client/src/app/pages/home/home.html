@@ -1,0 +1,28 @@
+<section class="hero" [style.background-image]="'url(' + heroSlides[currentSlide()].image + ')'">
+    <button class="hero-arrow prev" (click)="onPrevClick()" aria-label="Föregående kollektion">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="hero-content">
+        <h1>{{ heroSlides[currentSlide()].title }}</h1>
+        <p>{{ heroSlides[currentSlide()].text }}</p>
+    </div>
+
+    <button class="hero-arrow next" (click)="onNextClick()" aria-label="Nästa kollektion">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="hero-dots">
+        @for (slide of heroSlides; track slide.title; let i = $index) {
+            <span class="dot" [class.active]="i === currentSlide()"></span>
+        }
+    </div>
+</section>
+
+<section class="popular-products">
+    <div class="product-grid">
+        @for (product of products(); track product.id) {
+            <app-product-card [product]="product" />
+        }
+    </div>
+</section>
