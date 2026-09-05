@@ -1,19 +1,20 @@
 .site-footer {
-    padding: 1.5rem 1rem;
-    border-top: 1px solid #ddd; /* Ändra färger sen */
+    padding: var(--spacing-lg) var(--spacing-md);
+    background-color: var(--color-background-accent);
+    color: var(--color-text-on-accent);
 }
 
 .benefits {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
 }
 
 .benefit {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
 }
 
 .benefit i {
@@ -22,11 +23,11 @@
 
 .footer-columns {
     border-top: 1px solid #ddd;
-    padding-top: 0.5rem;
+    padding-top: var(--spacing-sm);
 }
 
 .footer-column {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .column-header {
@@ -37,11 +38,12 @@
     padding: 0.5rem 0;
     font-weight: bold;
     font-size: 1rem;
+    color: var(--color-text-on-accent);
     cursor: pointer;
 }
 
 .column-header.open {
-    background-color: #e0f0ff; /* ändra färger sen */
+    background-color: rgba(255, 255, 255, 0.15)
 }
 
 .column-links {
@@ -50,7 +52,7 @@
     padding: 0 0 0.5rem 0;
     display: none;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
 }
 
 .column-links.open {
@@ -59,26 +61,28 @@
 
 .column-links a {
     text-decoration: none;
-    color: inherit;
+    color: var(--color-text-on-accent);
+    opacity: 0.8;
 }
 
 .copyright {
     text-align: center;
-    margin-top: 1.5rem;
-    color: #667; /* ändra färger sen */
+    margin-top: var(--spacing-lg);
+    opacity: 0.6;
 }
 
+/* Meqia Queries */
 @media (min-width: 640px) {
     .benefits {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1rem 2rem;
+        gap: var(--spacing-md) var(--spacing-xl);
     }
 
     .footer-columns {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: var(--spacing-md);
         border-top: none;
     }
 
@@ -90,7 +94,7 @@
         cursor: default;
         pointer-events: none;
         background: none !important;
-        padding-bottom: 0.5rem;
+        padding-bottom: var(--spacing-sm);
     }
 
     .column-links {

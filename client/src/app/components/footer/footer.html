@@ -29,7 +29,7 @@
         </div>
 
         <div class="footer-column">
-            <button class="column-header" (click)="toggleSection('mina-sidor')">
+            <button class="column-header" (click)="toggleSection('mina-sidor')" [class.open]="isOpen('mina-sidor')">
                 Mina sidor
             </button>
             <ul class="column-links" [class.open]="isOpen('mina-sidor')">
@@ -39,7 +39,7 @@
         </div>
 
         <div class="footer-column">
-            <button class="column-header" (click)="toggleSection('kundtjanst')">
+            <button class="column-header" (click)="toggleSection('kundtjanst')" [class.open]="isOpen('kundtjanst')">
                 Kundtjänst
             </button>
             <ul class="column-links" [class.open]="isOpen('kundtjanst')">
