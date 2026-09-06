@@ -1,6 +1,6 @@
 .site-footer {
     padding: var(--spacing-lg) var(--spacing-md);
-    background-color: var(--color-background-accent);
+    background-color: var(--color-dim-grey);
     color: var(--color-text-on-accent);
 }
 

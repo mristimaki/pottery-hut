@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     padding: var(--spacing-xl) var(--spacing-md);
-
+    margin-top: var(--spacing-sm);
 }
 
 .hero::before {
@@ -21,6 +21,7 @@
     position: relative;
     z-index: 1;
     color: white;
+    padding: 0 var(--spacing-lg);
 }
 
 .hero-content h1 {
@@ -87,6 +88,18 @@
 
 /* Media Queries */
 @media (min-width: 640px) {
+    .hero-content {
+        padding: 0 var(--spacing-xxl);
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
     }
