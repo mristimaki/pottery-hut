@@ -1,0 +1,9 @@
+<section class="search-results">
+    <h2>Hittade {{ searchResult().length }} produkter</h2>
+    
+    <div class="search-grid">
+        @for (product of searchResult(); track product.id) {
+            <app-product-card [product]="product" />
+        }
+    </div>
+</section>
