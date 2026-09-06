@@ -12,7 +12,7 @@ export class Header {
   private router = inject(Router);
   searchTerm = '';
 
-  OnSearch() {
+  onSearch() {
     if (this.searchTerm.trim()) {
       this.router.navigate(['/search'], { queryParams: { q: this.searchTerm } });
     }

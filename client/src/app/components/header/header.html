@@ -2,12 +2,12 @@
     <a routerLink="/" class="logo">The Pottery Hut</a>
 
     <div class="search-row">
-        <form class="search-form" (ngSubmit)="OnSearch()">
+        <form class="search-form" (ngSubmit)="onSearch()">
             <input 
                 type="text" 
                 placeholder="Sök produkt"
                 [(ngModel)]="searchTerm"
-                name="" id=""
+                name="search"
             />
             <button type="submit">Sök</button>
         </form>
