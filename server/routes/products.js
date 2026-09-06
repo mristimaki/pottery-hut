@@ -21,7 +21,7 @@ router.get('/search', (req, res) => {
         WHERE name LIKE ? AND published_date <= date('now')
         `).all(`%${query}%`);
 
-        req.json(products);
+        res.json(products);
 });
 
 // GET /products/:slug - en specifik produkt
