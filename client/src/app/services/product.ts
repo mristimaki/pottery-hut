@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Service, inject } from '@angular/core';
+import { map } from 'rxjs';
 
 export interface Product {
     id: number;
@@ -28,5 +29,13 @@ export class ProductService {
 
     searchProducts(query: string) {
         return this.http.get<Product[]>(`${this.apiUrl}/search?q=${query}`);
+    }
+
+    getSimilarProducts(currentProduct: Product) {
+        return this.http.get<Product[]>(this.apiUrl).pipe(
+            map(products => products.filter(p => 
+                p.brand === currentProduct.brand && p.id !== currentProduct.id
+            ))
+        );
     }
 }
