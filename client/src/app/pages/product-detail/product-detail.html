@@ -15,3 +15,14 @@
 } @else {
     <p>Laddar...</p>
 }
+
+@if (similarProducts().length > 0) {
+    <section class="similar-products">
+        <h2>Liknande produkter</h2>
+        <div class="similar-grid">
+            @for (product of similarProducts(); track product.id) {
+                <app-product-card [product]="product" />
+            }
+        </div>
+    </section>
+}

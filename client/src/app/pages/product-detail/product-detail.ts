@@ -15,6 +15,7 @@ export class ProductDetail implements OnInit {
   private route = inject(ActivatedRoute);
 
   product = signal<Product | undefined>(undefined);
+  similarProducts = signal<Product[]>([]);
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -23,6 +24,10 @@ export class ProductDetail implements OnInit {
       if (slug) {
         this.productService.getProductBySlug(slug).subscribe(data => {
         this.product.set(data);
+        
+        this.productService.getSimilarProducts(data).subscribe(similar => {
+          this.similarProducts.set(similar);
+        });
       });
       }
     });
