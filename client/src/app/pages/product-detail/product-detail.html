@@ -1,0 +1,17 @@
+@if (product(); as p) {
+    <section class="product-detail">
+    <div class="image-wrapper">
+        <img [src]="p.image_url" [alt]="p.name">
+    </div>
+
+    <div class="content">
+        <h1 class="name">{{ p.name }}</h1>
+        <p class="description">{{ p.description }}</p>
+        <p class="price">{{ p.price }}</p>
+    
+        <button class="add-to-cart">Lägg i varukorg</button>
+    </div>
+</section>
+} @else {
+    <p>Laddar...</p>
+}
