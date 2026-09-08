@@ -9,7 +9,7 @@
         <p class="description">{{ p.description }}</p>
         <p class="price">{{ p.price }}</p>
     
-        <button class="add-to-cart">Lägg i varukorg</button>
+        <button class="add-to-cart" (click)="onAddToCart()">Lägg i varukorg</button>
     </div>
 </section>
 } @else {

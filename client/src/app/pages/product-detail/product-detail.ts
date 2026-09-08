@@ -3,6 +3,7 @@ import { ProductService } from '../../services/product';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../services/product';
 import { ProductCard } from '../../components/product-card/product-card';
+import { Cart } from '../../services/cart';
 
 @Component({
   imports: [ProductCard],
@@ -13,6 +14,7 @@ import { ProductCard } from '../../components/product-card/product-card';
 export class ProductDetail implements OnInit {
   private productService = inject(ProductService);
   private route = inject(ActivatedRoute);
+  private cart = inject(Cart);
 
   product = signal<Product | undefined>(undefined);
   similarProducts = signal<Product[]>([]);
@@ -31,5 +33,12 @@ export class ProductDetail implements OnInit {
       });
       }
     });
+  }
+
+  onAddToCart() {
+    const currentProduct = this.product();
+    if (currentProduct) {
+      this.cart.addToCart(currentProduct);
+    }
   }
 }
