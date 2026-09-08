@@ -6,7 +6,9 @@ const router = express.Router();
 // GET /products - alla produkter (till startsidan)
 router.get('/', (req, res) => {
     const products = db.prepare(`
-        SELECT * FROM products WHERE published_date <= date('now')
+        SELECT * FROM products
+        WHERE published_date <= date('now')
+        ORDER BY published_date DESC
         `).all();
 
         res.json(products);
