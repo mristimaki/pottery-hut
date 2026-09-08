@@ -2,12 +2,12 @@ import db from "./database.js";
 
 const products = [
     // Mud Collection
-    { theme: 'Mud', type: 'Vas', price: 249, sku: 'MUD001', image: 'mud-vase.png', publishedDate: '2026-06-10' },
-    { theme: 'Mud', type: 'Skål', price: 149, sku: 'MUD002', image: 'mud-bowl.png', publishedDate: '2026-06-10' },
-    { theme: 'Mud', type: 'Mugg', price: 179, sku: 'MUD003', image: 'mud-mug.png', publishedDate: '2026-05-20' },
-    { theme: 'Mud', type: 'Serveringsfat', variant: 'Small', price: 299, sku: 'MUD004', image: 'mud-serving-bowl-small.png', publishedDate: '2026-05-20' },
-    { theme: 'Mud', type: 'Serveringsfat', variant: 'Large', price: 499, sku: 'MUD005', image: 'mud-serving-bowl-large.png', publishedDate: '2026-05-20' },
-    { theme: 'Mud', type: 'Tallrik', price: 279, sku: 'MUD006', image: 'mud-plate.png', publishedDate: '2026-07-01' },
+    { theme: 'Mud', type: 'Vas', price: 249, sku: 'MUD001', image: 'mud-vase.png', publishedDate: '2026-09-01' },
+    { theme: 'Mud', type: 'Skål', price: 149, sku: 'MUD002', image: 'mud-bowl.png', publishedDate: '2026-09-01' },
+    { theme: 'Mud', type: 'Mugg', price: 179, sku: 'MUD003', image: 'mud-mug.png', publishedDate: '2026-09-01' },
+    { theme: 'Mud', type: 'Serveringsfat', variant: 'Small', price: 299, sku: 'MUD004', image: 'mud-serving-bowl-small.png', publishedDate: '2026-09-03' },
+    { theme: 'Mud', type: 'Serveringsfat', variant: 'Large', price: 499, sku: 'MUD005', image: 'mud-serving-bowl-large.png', publishedDate: '2026-09-03' },
+    { theme: 'Mud', type: 'Tallrik', price: 279, sku: 'MUD006', image: 'mud-plate.png', publishedDate: '2026-09-03' },
 
     // Sand Collection
     { theme: 'Sand', type: 'Mugg', price: 259, sku: 'SAN001', image: 'sand-mug.png', publishedDate: '2026-04-15' },
