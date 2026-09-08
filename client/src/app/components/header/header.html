@@ -14,7 +14,12 @@
 
         <div class="icons">
             <a href="#" aria-label="Favoriter"><i class="fa-regular fa-heart"></i></a>
-            <a routerLink="/basket" aria-label="Varukorg"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a routerLink="/basket" aria-label="Varukorg">
+                <i class="fa-solid fa-cart-shopping"></i>
+                @if (totalItemCount() > 0) {
+                    <span class="cart-badge">{{ totalItemCount() }}</span>
+                }
+            </a>
         </div>
     </div>
 

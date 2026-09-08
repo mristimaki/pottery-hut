@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { Cart } from '../../services/cart';
 
 @Component({
   imports: [RouterLink, FormsModule],
@@ -11,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 export class Header {
   private router = inject(Router);
   searchTerm = '';
+  private cart = inject(Cart);
+  totalItemCount = this.cart.totalItemCount;
 
   onSearch() {
     if (this.searchTerm.trim()) {
