@@ -1,0 +1,120 @@
+.basket {
+    padding: var(--spacing-lg) var(--spacing-md);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.basket h2 {
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-lg);
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-areas: 
+        "image info"
+        "image controls";
+    align-items: stretch;
+    gap: var(--spacing-sm) var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cart-item img {
+    grid-area: image;
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    align-self: stretch;
+    border-radius: var(--radius-sm);
+}
+
+.item-info {
+    grid-area: info;
+    min-width: 0;
+}
+
+.item-controls {
+    grid-area: controls;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.item-name {
+    font-weight: 500;
+    font-size: 0.90rem;
+    margin: 0 0 0.25rem 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.item-price {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.cart-item input[type="number"] {
+    width: 40px;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.item-total {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.cart-item button {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: var(--spacing-md);
+}
+
+.cart-item button:hover {
+    color: var(--color-primary);
+}
+
+.cart-summary {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-end;
+}
+
+.total {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.checkout-button {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+/* Media Querys */
+@media (min-width: 640px) {
+    .item-name {
+        font-size: 1rem;
+    }
+}

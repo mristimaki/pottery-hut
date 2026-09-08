@@ -1,0 +1,39 @@
+<section class="basket">
+    <h2>Varukorgen</h2>
+
+    <div class="cart-items">
+        @for (item of cart.cartItems(); track item.product.id) {
+            <div class="cart-item">
+                <img [src]="item.product.image_url" [alt]="item.product.name">
+
+                <div class="item-info">
+                    <p class="item-name">{{ item.product.name }}</p>
+                    <p class="item-price">{{ item.product.price }}</p>
+                </div>
+
+                <div class="item-controls">
+                    <input 
+                        type="number"
+                        [value]="item.quantity"
+                        min="1"
+                        (change)="cart.updateQuantity(item.product.id, + $event.target.value)"
+                    />
+                    <p class="item-total">{{ item.product.price * item.quantity }} kr</p>
+
+                    <button (click)="cart.removeFromCart(item.product.id)" aria-label="Ta bort">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (cart.cartItems().length === 0) {
+        <p>Här var det tomt..</p>
+    } @else {
+        <div class="cart-summary">
+            <p class="total">Totalt: {{ cart.totalPrice() }} kr</p>
+            <a routerLink="/checkout" class="checkout-button">Till kassan</a>
+        </div>
+    }
+</section>
