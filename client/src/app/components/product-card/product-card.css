@@ -19,13 +19,13 @@
 }
 
 .badge {
-    position: relative;
+    position: absolute;
     top: var(--spacing-sm);
     left: var(--spacing-sm);
     background-color: var(--color-primary);
     color: white;
     font-size: 0.75rem;
-    padding: o.25rem var(--spacing-sm);
+    padding: 0.25rem var(--spacing-sm);
     border-radius: var(--radius-sm);
 }
 
