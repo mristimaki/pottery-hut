@@ -18,6 +18,7 @@ export interface Product {
 export class ProductService {
     private http = inject(HttpClient);
     private apiUrl = 'http://localhost:3000/products';
+    private adminUrl = 'http://localhost:3000/admin/products';
 
     getProducts() {
         return this.http.get<Product[]>(this.apiUrl);
@@ -37,5 +38,13 @@ export class ProductService {
                 p.brand === currentProduct.brand && p.id !== currentProduct.id
             ))
         );
+    }
+
+    getAdminProducts() {
+        return this.http.get<Product[]>(this.adminUrl);
+    }
+
+    deleteProduct(id: number) {
+        return this.http.delete(`${this.adminUrl}/${id}`);
     }
 }
