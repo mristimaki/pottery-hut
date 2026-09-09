@@ -48,6 +48,14 @@
     gap: var(--spacing-sm);
 }
 
+.item-controls select {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: white;
+    cursor: pointer;
+}
+
 .item-name {
     font-weight: 500;
     font-size: 0.90rem;
