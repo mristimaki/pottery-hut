@@ -5,6 +5,7 @@ import { ProductDetail } from './pages/product-detail/product-detail';
 import { Basket } from './pages/basket/basket';
 import { Checkout } from './pages/checkout/checkout';
 import { AdminProductList } from './pages/admin-product-list/admin-product-list';
+import { AdminProductNew } from './pages/admin-product-new/admin-product-new';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -12,5 +13,6 @@ export const routes: Routes = [
     { path: 'products/:slug', component: ProductDetail },
     { path: 'basket', component: Basket },
     { path: 'checkout', component: Checkout },
-    { path: 'admin/products', component: AdminProductList }
+    { path: 'admin/products', component: AdminProductList },
+    { path: 'admin/products/new', component: AdminProductNew }
 ];
