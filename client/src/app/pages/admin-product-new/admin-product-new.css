@@ -1,0 +1,61 @@
+.admin-product-new {
+    padding: var(--spacing-lg) var(--spacing-md);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.admin-product-new h2 {
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-sm);
+}
+
+.admin-product-new h3 {
+    font-weight: 500;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-lg);
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.product-form label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.product-form input,
+.product-form textarea {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+}
+
+.error {
+    color: red;
+    opacity: 0.9;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.product-form button[type="submit"] {
+    padding: var(--spacing-md);
+    border: none;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: var(--spacing-sm);
+}
+
+.product-form button[type="submit"]:hover {
+    opacity: 0.9;
+}

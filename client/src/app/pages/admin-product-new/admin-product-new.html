@@ -1,0 +1,63 @@
+<section class="admin-product-new">
+    <h2>Administration</h2>
+    <h3>Ny produkt</h3>
+
+    <form (ngSubmit)="onSubmit()" class="product-form">
+        <label>
+            Namn
+            <input type="text" [(ngModel)]="name" name="name" placeholder="Ange Produktnamn" maxlength="25" required #nameField="ngModel" />
+            @if (nameField.invalid && nameField.touched) {
+                <span class="error">Namn är obligatoriskt</span>
+            }
+        </label>
+
+        <label>
+            Beskrivning
+            <textarea [(ngModel)]="description" name="description" placeholder="Ange Beskrivning"></textarea>
+        </label>
+
+        <label>
+            Bild
+            <input type="text" [(ngModel)]="imageUrl" name="imageUrl" placeholder="Ange URL" required #imageField="ngModel" />
+            @if (imageField.invalid && imageField.touched) {
+                <span class="error">Bild URL är obligatoriskt</span>
+            }
+        </label>
+
+        <label>
+            Kollektion
+            <input type="text" [(ngModel)]="brand" name="brand" />
+        </label>
+
+        <label>
+            SKU
+            <input 
+                type="text" 
+                [(ngModel)]="sku" 
+                name="sku"
+                pattern="[A-Z]{3}[0-9]{3}"
+                placeholder="Ange SKU"
+                required
+                #skuField="ngModel"
+            />
+            @if (skuField.invalid && skuField.touched) {
+                <span class="error">SKU krävs i format ABC123</span>
+            }
+        </label>
+
+        <label>
+            Pris
+            <input type="number" [(ngModel)]="price" name="price" />
+        </label>
+
+        <label>
+            Publiceringsdatum
+            <input type="date" [(ngModel)]="publishedDate" name="publishedDate" required #dateField="ngModel"/>
+            @if (dateField.invalid && dateField.touched) {
+                <span class="error">Publiceringsdatum är obligatoriskt</span>
+            }
+        </label>
+
+        <button type="submit">Lägg till</button>
+    </form>
+</section>
