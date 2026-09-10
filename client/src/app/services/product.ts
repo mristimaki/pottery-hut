@@ -14,6 +14,16 @@ export interface Product {
     published_date: string;
 }
 
+export interface NewProduct {
+    name: string;
+    description: string;
+    sku: string;
+    brand: string;
+    imageUrl: string;
+    price: number;
+    publishedDate: string;
+}
+
 @Service()
 export class ProductService {
     private http = inject(HttpClient);
@@ -46,5 +56,9 @@ export class ProductService {
 
     deleteProduct(id: number) {
         return this.http.delete(`${this.adminUrl}/${id}`);
+    }
+
+    createProduct(product: NewProduct) {
+        return this.http.post(this.adminUrl, product);
     }
 }
