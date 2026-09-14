@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../services/product';
 import { ProductCard } from '../../components/product-card/product-card';
 import { Cart } from '../../services/cart';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   imports: [ProductCard],
@@ -15,6 +16,7 @@ export class ProductDetail implements OnInit {
   private productService = inject(ProductService);
   private route = inject(ActivatedRoute);
   private cart = inject(Cart);
+  private titleService = inject(Title);
 
   product = signal<Product | undefined>(undefined);
   similarProducts = signal<Product[]>([]);
@@ -26,6 +28,7 @@ export class ProductDetail implements OnInit {
       if (slug) {
         this.productService.getProductBySlug(slug).subscribe(data => {
         this.product.set(data);
+        this.titleService.setTitle(data.name);
         
         this.productService.getSimilarProducts(data).subscribe(similar => {
           this.similarProducts.set(similar);
