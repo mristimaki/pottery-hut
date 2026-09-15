@@ -4,6 +4,9 @@
         @if (isNew()) {
             <span class="badge">Nyhet</span>
         }
+        <a href="#" class="favorite-icon" aria-label="Favorit" (click)="$event.preventDefault()">
+            <i class="fa-regular fa-heart"></i>
+        </a>
     </div>
 
     <p class="brand">{{ product().brand }}</p>

@@ -29,6 +29,15 @@
     border-radius: var(--radius-sm);
 }
 
+.favorite-icon {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
 .brand {
     margin: var(--spacing-sm) 0 0.25rem 0;
     font-size: 0.75rem;
