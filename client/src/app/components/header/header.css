@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .logo {
@@ -23,7 +24,8 @@
 .search-form {
     display: flex;
     gap: var(--spacing-sm);
-    width: 100%;
+    flex-grow: 1;
+    min-width: 0;
 }
 
 .search-form input {
@@ -88,7 +90,6 @@
     .site-header {
         display: flex;
         flex-direction: column;
-        align-items: center;
         text-align: center;
         gap: var(--spacing-md);
         padding: var(--spacing-sm);
@@ -96,21 +97,31 @@
     
     .main-nav {
         flex-direction: row;
+        justify-content: center;
         gap: var(--spacing-lg);
     }
 
     .search-row {
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr minmax(0, 500px) 1fr;
+        align-items: center;
     }
 
     .search-form {
-        max-width: 500px;
+        grid-column: 2;
+        justify-self: center;
+        width: 100%;
+    }
+
+    .icons {
+        grid-column: 3;
+        justify-self: end;
+        margin-right: var(--spacing-md);
     }
 }
 
 @media (min-width: 1024px) {
     .site-header {
-        align-items: center;
         text-align: center;
         justify-content: space-between;
         padding: var(--spacing-lg) var(--spacing-md);
