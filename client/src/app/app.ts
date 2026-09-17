@@ -2,8 +2,6 @@ import { Component, inject, signal } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
-import { fakeAsync } from '@angular/core/testing';
-import { every } from 'rxjs';
 
 @Component({
   imports: [RouterOutlet, Header, Footer],
