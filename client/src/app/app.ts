@@ -1,7 +1,9 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
+import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
+import { fakeAsync } from '@angular/core/testing';
+import { every } from 'rxjs';
 
 @Component({
   imports: [RouterOutlet, Header, Footer],
@@ -10,5 +12,14 @@ import { Footer } from './components/footer/footer';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('client');
+  private router = inject(Router);
+  isAdminRoute = signal(false);
+
+  constructor() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isAdminRoute.set(event.urlAfterRedirects.startsWith('/admin'));
+      }
+    });
+  }
 }

@@ -4,6 +4,7 @@ import { SearchResults } from './pages/search-results/search-results';
 import { ProductDetail } from './pages/product-detail/product-detail';
 import { Basket } from './pages/basket/basket';
 import { Checkout } from './pages/checkout/checkout';
+import { Administration } from './components/administration/administration';
 import { AdminProductList } from './pages/admin-product-list/admin-product-list';
 import { AdminProductNew } from './pages/admin-product-new/admin-product-new';
 
@@ -13,6 +14,12 @@ export const routes: Routes = [
     { path: 'products/:slug', component: ProductDetail },
     { path: 'basket', component: Basket },
     { path: 'checkout', component: Checkout },
-    { path: 'admin/products', component: AdminProductList },
-    { path: 'admin/products/new', component: AdminProductNew }
+    {
+        path: 'admin',
+        component: Administration,
+        children: [
+            { path: 'products', component: AdminProductList },
+            { path: 'products/new', component: AdminProductNew }
+        ]
+    }
 ];
