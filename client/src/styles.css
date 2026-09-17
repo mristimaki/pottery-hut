@@ -1,21 +1,24 @@
 :root {
     /* Primära färger */
-    --color-dusty-grape: #6C698D;
-    --color-dust-grey: #D4D2D5;
-    --color-silver: #BFAFA6;
-    --color-dusty-taupe: #AA968A;
-    --color-dim-grey: #6E6A6F;
+    --color-almond-cream: #EDE0D4;
+    --color-desert-sand: #E6CCB2;
+    --color-tan: #DDB892;
+    --color-faded-copper: #B08968;
+    --color-coffee-bean: #7f5539;
+    --color-toffee-brown: #83583d;
 
     /* Semantisk användning */
     --color-background: #ffffff;
-    --color-background-accent: var(--color-dusty-taupe);
+    --color-background-accent: var(--color-faded-copper);
     --color-text: #2b2b2b;
     --color-text-on-accent: #ffffff;
-    --color-text-muted: var(--color-dim-grey);
-    --color-border: var(--color-dust-grey);
-    --color-primary: var(--color-dusty-grape);
+    --color-text-muted: var(--color-coffee-bean);
+    --color-border: var(--color-desert-sand);
+    --color-primary: var(--color-faded-copper);
+    --color-logo: var(--color-toffee-brown);
 
     /* Typsnitt */
+    --font-logo: 'Tenor Sans', serif;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
 
