@@ -11,7 +11,7 @@
 
 .admin-products h3 {
     font-weight: 500;
-    color: var(--color-text-muted);
+    color: var(--color-text);
     margin-bottom: var(--spacing-lg);
 }
 
@@ -30,13 +30,13 @@ th {
 td button {
     background: none;
     border: none;
-    color: var(--color-text-muted);
+    color: var(--color-text);
     cursor: pointer;
     font-size: 1rem;
 }
 
 td button:hover {
-    color: var(--color-primary);
+    opacity: 0.75;
 }
 
 .new-product-button {
@@ -46,6 +46,10 @@ td button:hover {
     color: white;
     text-decoration: none;
     border-radius: var(--radius-sm);
+}
+
+.new-product-button:hover {
+    opacity: 0.9;
 }
 
 /* Media Querys */

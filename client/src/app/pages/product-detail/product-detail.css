@@ -25,7 +25,7 @@
 }
 
 .description {
-    color: var(--color-text-muted);
+    color: var(--color-text);
     line-height: 1.6;
     margin-bottom: var(--spacing-md);
 }
@@ -41,7 +41,7 @@
     padding: var(--spacing-md);
     border: none;
     border-radius: var(--radius-sm);
-    background-color: var(--color-dim-grey);
+    background-color: var(--color-primary);
     color: white;
     font-size: 1rem;
     cursor: pointer;

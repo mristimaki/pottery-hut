@@ -1,6 +1,6 @@
 .site-footer {
     padding: var(--spacing-lg) var(--spacing-md);
-    background-color: var(--color-dim-grey);
+    background-color: var(--color-text-muted);
     color: var(--color-text-on-accent);
 }
 
@@ -105,5 +105,14 @@
 @media (min-width: 1024px) {
     .benefits {
         grid-template-columns: repeat(4, 1fr);
+        font-size: 1.25rem;
+    }
+
+    .column-header {
+        font-size: 1.25rem;
+    }
+
+    .footer-column {
+        font-size: 1.15rem;
     }
 }

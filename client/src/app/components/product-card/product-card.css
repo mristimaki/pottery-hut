@@ -56,3 +56,18 @@
     margin: 0;
     font-weight: 600;
 }
+
+/* Media Queries */
+@media (min-width: 640px) {
+    .badge {
+        font-size: 1rem;
+    }
+
+    .brand {
+        font-size: 1rem;
+    }
+
+    .name {
+        font-size: 1.1rem;
+    }
+}
