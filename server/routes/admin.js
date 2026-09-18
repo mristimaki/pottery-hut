@@ -5,7 +5,10 @@ const router = express.Router();
 
 // GET /admin/products - alla produkter till admin-tabellen
 router.get('/products', (req, res) => {
-    const products = db.prepare(`SELECT * FROM products`).all();
+    const products = db.prepare(`
+        SELECT * FROM products
+        ORDER BY id DESC
+        `).all();
     res.json(products);
 });
 
