@@ -1,9 +1,10 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Cart } from '../../services/cart';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   selector: 'app-checkout',
   styleUrl: './checkout.css',
   templateUrl: './checkout.html',
@@ -19,7 +20,9 @@ export class Checkout {
   city = '';
   newsletter = false;
 
+  orderComplete = signal(false);
+
   onSubmit() {
-    // Gör medvetet ingenting (enligt wireframe-krav)
+    this.orderComplete.set(true);
   }
 }
