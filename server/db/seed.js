@@ -5,19 +5,23 @@ const products = [
     { theme: 'Mud', type: 'Vas', price: 249, sku: 'MUD001', image: 'mud-vase.png', publishedDate: '2026-09-01' },
     { theme: 'Mud', type: 'Skål', price: 149, sku: 'MUD002', image: 'mud-bowl.png', publishedDate: '2026-09-01' },
     { theme: 'Mud', type: 'Mugg', price: 179, sku: 'MUD003', image: 'mud-mug.png', publishedDate: '2026-09-01' },
-    { theme: 'Mud', type: 'Serveringsfat', variant: 'Small', price: 299, sku: 'MUD004', image: 'mud-serving-bowl-small.png', publishedDate: '2026-09-03' },
-    { theme: 'Mud', type: 'Serveringsfat', variant: 'Large', price: 499, sku: 'MUD005', image: 'mud-serving-bowl-large.png', publishedDate: '2026-09-03' },
-    { theme: 'Mud', type: 'Tallrik', price: 279, sku: 'MUD006', image: 'mud-plate.png', publishedDate: '2026-09-03' },
+    { theme: 'Mud', type: 'Serveringsfat', variant: 'Small', price: 299, sku: 'MUD004', image: 'mud-serving-bowl-small.png', publishedDate: '2026-09-21' },
+    { theme: 'Mud', type: 'Serveringsfat', variant: 'Large', price: 499, sku: 'MUD005', image: 'mud-serving-bowl-large.png', publishedDate: '2026-09-21' },
+    { theme: 'Mud', type: 'Tallrik', price: 279, sku: 'MUD006', image: 'mud-plate.png', publishedDate: '2026-09-23' },
 
     // Sand Collection
     { theme: 'Sand', type: 'Mugg', price: 259, sku: 'SAN001', image: 'sand-mug.png', publishedDate: '2026-04-15' },
     { theme: 'Sand', type: 'Skål', price: 329, sku: 'SAN002', image: 'sand-bowl.png', publishedDate: '2026-04-15' },
     { theme: 'Sand', type: 'Tallrik', price: 289, sku: 'SAN003', image: 'sand-plate.png', publishedDate: '2026-04-15' },
+    { theme: 'Sand', type: 'Vas', price: 249, sku: 'SAN004', image: 'sand-vase.png', publishedDate: '2026-04-21' },
+    { theme: 'Sand', type: 'Serveringsfat', price: 479, sku: 'SAN005', image: 'sand-serving-plate.png', publishedDate: '2026-04-21' },
 
     // Grass Collection
     { theme: 'Grass', type: 'Mugg', price: 179, sku: 'GRA001', image: 'grass-mug.png', publishedDate: '2026-03-01' },
     { theme: 'Grass', type: 'Skål', price: 219, sku: 'GRA002', image: 'grass-bowl.png', publishedDate: '2026-03-01' },
     { theme: 'Grass', type: 'Tallrik', price: 279, sku: 'GRA003', image: 'grass-plate.png', publishedDate: '2026-03-01' },
+    { theme: 'Grass', type: 'Serveringsskål', price: 459, sku: 'GRA004', image: 'grass-serving-bowl.png', publishedDate: '2026-03-01' },
+    { theme: 'Grass', type: 'Vas', price: 279, sku: 'GRA005', image: 'grass-vase.png', publishedDate: '2026-03-01' },
 
     // Ocean Collection (nyligen publicerade – triggar "Nyhet")
     { theme: 'Ocean', type: 'Mugg', variant: 'Lång', price: 289, sku: 'OCE001', image: 'ocean-mug.png', publishedDate: '2026-08-28' },
@@ -25,12 +29,14 @@ const products = [
     { theme: 'Ocean', type: 'Vas', price: 649, sku: 'OCE003', image: 'ocean-vase.png', publishedDate: '2026-08-28' },
     { theme: 'Ocean', type: 'Serveringsfat', price: 549, sku: 'OCE004', image: 'ocean-serving-plate.png', publishedDate: '2026-08-28' },
     { theme: 'Ocean', type: 'Skål', price: 339, sku: 'OCE005', image: 'ocean-bowl.png', publishedDate: '2026-08-28' },
-    { theme: 'Ocean', type: 'Tallrik', price: 279, sku: 'OCE005', image: 'ocean-plate.png', publishedDate: '2026-08-28' },
+    { theme: 'Ocean', type: 'Tallrik', price: 279, sku: 'OCE006', image: 'ocean-plate.png', publishedDate: '2026-10-28' },
 
     // Cloud Collection (en framtida – testar "dold produkt"-logiken)
     { theme: 'Cloud', type: 'Mugg', price: 269, sku: 'CLO001', image: 'cloud-mug.png', publishedDate: '2026-02-10' },
     { theme: 'Cloud', type: 'Skål', price: 319, sku: 'CLO002', image: 'cloud-bowl.png', publishedDate: '2026-02-10' },
-    { theme: 'Cloud', type: 'Tallrik', price: 289, sku: 'CLO003', image: 'cloud-plate.png', publishedDate: '2026-09-15' },
+    { theme: 'Cloud', type: 'Tallrik', price: 289, sku: 'CLO003', image: 'cloud-plate.png', publishedDate: '2026-03-15' },
+    { theme: 'Cloud', type: 'Serveringsfat', price: 459, sku: 'CLO004', image: 'cloud-serving-plate.png', publishedDate: '2026-10-21' },
+    { theme: 'Cloud', type: 'Vas', price: 289, sku: 'CLO005', image: 'cloud-vase.png', publishedDate: '2026-03-23' },
 
     // Tropical Collection
     { theme: 'Tropical', type: 'Mugg', price: 279, sku: 'TRO001', image: 'tropical-mug.png', publishedDate: '2026-01-15' },
