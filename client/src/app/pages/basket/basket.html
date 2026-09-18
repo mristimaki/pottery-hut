@@ -8,7 +8,7 @@
 
                 <div class="item-info">
                     <p class="item-name">{{ item.product.name }}</p>
-                    <p class="item-price">{{ item.product.price }}</p>
+                    <p class="item-price">{{ item.product.price }} SEK</p>
                 </div>
 
                 <div class="item-controls">
@@ -21,7 +21,7 @@
                                 <option [ngValue]="num">{{ num }}</option>
                             }
                     </select>
-                    <p class="item-total">{{ item.product.price * item.quantity }} kr</p>
+                    <p class="item-total">{{ item.product.price * item.quantity }} SEK</p>
 
                     <button (click)="cart.removeFromCart(item.product.id)" aria-label="Ta bort">
                         <i class="fa-solid fa-trash"></i>
@@ -35,7 +35,7 @@
         <p>Här var det tomt..</p>
     } @else {
         <div class="cart-summary">
-            <p class="total">Totalt: {{ cart.totalPrice() }} kr</p>
+            <p class="total">Totalt: {{ cart.totalPrice() }} SEK</p>
             <a routerLink="/checkout" class="checkout-button">Till kassan</a>
         </div>
     }
