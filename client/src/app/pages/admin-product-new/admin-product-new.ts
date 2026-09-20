@@ -17,6 +17,7 @@ export class AdminProductNew {
   description = '';
   sku = '';
   brand = '';
+  type = '';
   imageUrl = '';
   price = 0;
   publishedDate = '';
@@ -27,6 +28,7 @@ export class AdminProductNew {
       description: this.description,
       sku: this.sku,
       brand: this.brand,
+      type: this.type,
       imageUrl: this.imageUrl,
       price: this.price,
       publishedDate: this.publishedDate

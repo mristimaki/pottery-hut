@@ -11,6 +11,14 @@
         </label>
 
         <label>
+            Typ
+            <input type="text" [(ngModel)]="type" name="type" placeholder="Ange Typ" required #nameField="ngModel" />
+            @if (nameField.invalid && nameField.touched) {
+                <span class="error">Typ är obligatoriskt</span>
+            }
+        </label>
+
+        <label>
             Beskrivning
             <textarea [(ngModel)]="description" name="description" placeholder="Ange Beskrivning"></textarea>
         </label>

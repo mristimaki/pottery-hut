@@ -14,10 +14,10 @@ router.get('/products', (req, res) => {
 
 // POST /admin/products - skapa ny produkt
 router.post('/products', (req, res) => {
-    const { name, description, sku, brand, imageUrl, price, publishedDate } = req.body;
+    const { name, description, sku, brand, type, imageUrl, price, publishedDate } = req.body;
 
-    if (!name || !sku || !imageUrl || !publishedDate) {
-        return res.status(400).json({ error: 'Namn, SKU, bild-URL och publiceringsdatum är obligatoriska' });
+    if (!name || !type || !sku || !imageUrl || !publishedDate) {
+        return res.status(400).json({ error: 'Namn, typ, SKU, bild-URL och publiceringsdatum är obligatoriska' });
     }
 
     const slug = name.toLowerCase()
@@ -25,11 +25,11 @@ router.post('/products', (req, res) => {
     .replace(/\s+/g, '-');
 
     const insert = db.prepare(`
-        INSERT INTO products (slug, name, description, sku, brand, image_url, price, published_date)
-        VALUES (@slug, @name, @description, @sku, @brand, @imageUrl, @price, @publishedDate)
+        INSERT INTO products (slug, name, description, sku, brand, type, image_url, price, published_date)
+        VALUES (@slug, @name, @description, @sku, @brand, @type, @imageUrl, @price, @publishedDate)
         `);
 
-        insert.run({ slug, name, description, sku, brand, imageUrl, price, publishedDate });
+        insert.run({ slug, name, description, sku, brand, type, imageUrl, price, publishedDate });
 
         res.status(201).json({ message: 'Produkt skapad', slug });
 });

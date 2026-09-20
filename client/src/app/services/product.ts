@@ -20,6 +20,7 @@ export interface NewProduct {
     description: string;
     sku: string;
     brand: string;
+    type: string;
     imageUrl: string;
     price: number;
     publishedDate: string;
