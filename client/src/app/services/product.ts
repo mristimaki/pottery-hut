@@ -9,6 +9,7 @@ export interface Product {
     description: string;
     sku: string;
     brand: string;
+    type: string;
     image_url: string;
     price: number;
     published_date: string;
@@ -44,9 +45,16 @@ export class ProductService {
 
     getSimilarProducts(currentProduct: Product) {
         return this.http.get<Product[]>(this.apiUrl).pipe(
-            map(products => products.filter(p => 
-                p.brand === currentProduct.brand && p.id !== currentProduct.id
-            ))
+            map(products => {
+                const others = products.filter(p => p.id !== currentProduct.id);
+
+                const sameCollection = others.filter(p => p.brand === currentProduct.brand);
+                const sameType = others.filter(
+                    p => p.type === currentProduct.type && p.brand !== currentProduct.brand
+                );
+
+                return [...sameCollection, ...sameType];
+            })
         );
     }
 

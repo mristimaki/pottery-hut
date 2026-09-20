@@ -56,8 +56,8 @@ const descriptions = {
 };
 
 const insert = db.prepare(`
-    INSERT INTO products (slug, name, description, sku, brand, image_url, price, published_date)
-    VALUES (@slug, @name, @description, @sku, @brand, @imageUrl, @price, @publishedDate)
+    INSERT INTO products (slug, name, description, sku, brand, type, image_url, price, published_date)
+    VALUES (@slug, @name, @description, @sku, @brand, @type, @imageUrl, @price, @publishedDate)
 `);
 
 for (const p of products) {
@@ -70,6 +70,7 @@ for (const p of products) {
         description: descriptions[p.type](p.theme),
         sku: p.sku,
         brand: `${p.theme} Collection`,
+        type: p.type,
         imageUrl: `/products/${p.image}`,
         price: p.price,
         publishedDate: p.publishedDate,

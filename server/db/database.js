@@ -10,6 +10,7 @@ db.exec(`
     description TEXT,
     sku TEXT NOT NULL,
     brand TEXT,
+    type TEXT,
     image_url TEXT NOT NULL,
     price REAL NOT NULL,
     published_date TEXT NOT NULL
