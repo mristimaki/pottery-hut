@@ -24,5 +24,6 @@ export class Checkout {
 
   onSubmit() {
     this.orderComplete.set(true);
+    this.cart.clearCart();
   }
 }

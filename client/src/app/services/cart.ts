@@ -49,4 +49,8 @@ export class Cart {
             )
         );
     }
+
+    clearCart() {
+        this.items.set([]);
+    }
 }
