@@ -91,3 +91,11 @@ pottery-hut/
     ├── index.js                      # Startpunkt, Express-setup
     └── pottery-hut.db                # Databasfil (gitignored)
 ```
+
+## AI-användning
+
+Jag har använt Claude (Anthropic) som stöd genom hela projektet - bland 
+annat för att förklara Angular- och TypeScript-koncept, felsöka CSS och 
+kod, få vägledning kring struktur och git-arbetsflöde, samt som bollplank 
+vid designbeslut. Jag har även använt AI för att generera produktbilder. 
+All kod är skriven, testad och förstådd av mig själv.
