@@ -19,9 +19,9 @@ Projektet är byggt mobile-first med vanlig CSS och backend helt fristående fr�
 
 ## Teknikstack
 
-**Frontend:** Angular 22, CSS (mobile-first, design tokens via CSS-variabler)  
-**Backend:** Node.js, Express  
-**Databas:** SQLite  
+**Frontend:** Angular 22, CSS (mobile-first, design tokens via CSS-variabler) 
+**Backend:** Node.js, Express 
+**Databas:** SQLite 
 
 ## Kom igång lokalt
 
