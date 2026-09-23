@@ -12,8 +12,8 @@
 
         <label>
             Typ
-            <input type="text" [(ngModel)]="type" name="type" placeholder="Ange Typ" required #nameField="ngModel" />
-            @if (nameField.invalid && nameField.touched) {
+            <input type="text" [(ngModel)]="type" name="type" placeholder="Ange Typ" required #typeField="ngModel" />
+            @if (typeField.invalid && typeField.touched) {
                 <span class="error">Typ är obligatoriskt</span>
             }
         </label>

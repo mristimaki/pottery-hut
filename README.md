@@ -52,6 +52,8 @@ Appen körs på `http://localhost:4200`, API:et på `http://localhost:3000`.
 
 ```
 pottery-hut/
+├── CLAUDE.md                        # AI-riktlinjer
+│(Angular/TypeScript)
 ├── client/                          # Angular frontend
 │   ├── public/
 │   │   ├── products/                # Produktbilder
@@ -62,6 +64,7 @@ pottery-hut/
 │       │   │   ├── header/
 │       │   │   ├── footer/
 │       │   │   └── product-card/
+│       │   │   └── administration/  # Admin-layout (topbar + sidebar)
 │       │   ├── pages/                # Route-kopplade sidor
 │       │   │   ├── home/
 │       │   │   ├── search-results/
@@ -88,15 +91,3 @@ pottery-hut/
     ├── index.js                      # Startpunkt, Express-setup
     └── pottery-hut.db                # Databasfil (gitignored)
 ```
-
-## Skärmdumpar
-
-(lägger till senare)
-
-## Vad jag lärt mig / utmaningar
-
-- **Angular signals** (`signal`, `computed`, `.update()`) för att hantera state utan extern state-management, bland annat i kundvagnen (`Cart`-servicen)
-- **Nästlade Observables** - flera beroende asynkrona anrop (t.ex. läsa URL-parameter - hämta liknande produkter baserat på den).
-- **REST-design** - separata endpoints för publikt vs administrativt bruk (`/products` filtrerar på publiceringsdatum, `/admin/products` visar allt).
-- **Felsökning** - diverse felsökning/debugging kring både CSS, `req`/`res`- förväxlingar och typmatchning mellan frontend och backend (dokumenterat mer utförligt i projektets beslutslogg).
-- **Strukturerad git-hantering** - innan det här projektet gjorde jag oftast en enda stor `git add .`-commit per arbetspass eller funktion. Jag har lärt mig att dela upp arbetet i flera mindre avgränsande commits (per fil eller funktion), med beskrivande meddelande för var och en, och att man kan samla flera commits lokalt innan man gör en enda `git push` i slutet. 
